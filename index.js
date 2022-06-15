@@ -29,7 +29,7 @@ server.get("/is-today-holiday", (request, response) => {
   const hoje = new Date().toLocaleDateString();
   const todayHolidays = holidays.find((holiday) => holiday.date === hoje)
   response.send(
-      todayHolidays ? `Sim, hoje é dia de ${todayHolidays.name}` : "nn tem feriado hj"
+      todayHolidays ? `Sim, hoje é dia de ${todayHolidays.name}` : "Não, hoje não é feriado"
     );    
 });
 
